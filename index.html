@@ -1,0 +1,85 @@
+ <!DOCTYPE html>
+<html lang=pt-PT>
+<head>
+<title>Radio Estremadura</title>
+<meta name="description" content="Estremadura24" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv=X-UA-Compatible content="IE=Edge"/>
+<meta property="og:title" content="Estremadura24 Player" />
+<meta property="og:description" content="Estremadura24" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/wiHgZBM.png" sizes="48x48" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/wiHgZBM.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/wiHgZBM.png" sizes="144x144" />
+<link rel="icon" type="image/png" href="https://i.imgur.com/wiHgZBM.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i.imgur.com/wiHgZBM.png" sizes="180x180"/>
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<style type="text/css">
+#animation{
+	position: absolute;
+	left: 1210px;        
+	top: 115px;
+	height: 44px;
+	width: 147px;
+	}
+</style>
+     <div id="animation">
+ <div align="right"><img src="https://i.imgur.com/Rb1eWlt.png" alt="efec" width="220" height="220"></div>
+ 	<script>
+
+    var message = "©arlos Copyright";
+
+    function clickIE4() {
+        if (event.button == 2) {
+            alert(message);
+            return false;
+        }
+    }
+
+    function clickNS4(e) {
+        if (document.layers || document.getElementById && !document.all) {
+            if (e.which == 2 || e.which == 3) {
+                alert(message);
+                return false;
+            }
+        }
+    }
+
+    if (document.layers) {
+        document.captureEvents(Event.MOUSEDOWN);
+        document.onmousedown = clickNS4;
+    } else if (document.all && !document.getElementById) {
+        document.onmousedown = clickIE4;
+    }
+
+    document.oncontextmenu = new Function("alert(message);return false")
+</script>
+<script>
+
+    function disableselect(e) {
+        return false
+    }
+    function reEnable() {
+        return true
+    }
+    document.onselectstart = new Function("return false")
+    if (window.sidebar) {
+        document.onmousedown = disableselect
+        document.onclick = reEnable
+    }
+</script>
+<script>
+        window.oncontextmenu = function () {
+            console.log("Right Click Disabled");
+            return false;
+        }
+    </script> 
+<!-- partial -->
+  <script src='./script-1.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
